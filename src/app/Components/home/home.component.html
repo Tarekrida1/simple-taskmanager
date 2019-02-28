@@ -1,18 +1,21 @@
-<div class="container">
-    <a routerLink='/add_task' class="btn btn-primary">Add New Task</a>
-</div>
-<div *ngIf="tasksSer.tasks.length == 0">
-    <p class="alert alert-primary container">
-        ther is No Tasks
-    </p>
-</div>
-<div *ngIf="tasksSer.tasks.length != 0" class="container">
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let task of tasksSer.tasks; index as i">
-            <a [routerLink]="['/task', i]">
+<div @tasksssAnimation>
+    <div class="container">
+        <h1 class="text-center">Task Manager</h1>
+        <a routerLink='/add_task' class="btn btn-primary">Add New Task</a>
+    </div>
+    <div *ngIf="tasksSer.tasks.length == 0">
+        <p class="alert alert-primary container">
+            ther is No Tasks
+        </p>
+    </div>
+    <div *ngIf="tasksSer.tasks.length != 0" class="container">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let task of tasksSer.tasks; index as i">
+                <a [routerLink]="['/task', i]">
                 {{task.title}}
             </a>
-            <button class="btn btn-danger" (click)=deleteTask(i)>Delete</button>
-        </li>
-    </ul>
+                <button class="btn btn-danger" (click)=deleteTask(i)>Delete</button>
+            </li>
+        </ul>
+    </div>
 </div>

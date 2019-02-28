@@ -7,6 +7,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { AddtaskComponent } from './Components/addtask/addtask.component';
 import { TaskComponent } from './Components/task/task.component';
 import { NotfoundComponent } from './Components/notfound/notfound.component';
+import {  BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { from } from 'rxjs';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
